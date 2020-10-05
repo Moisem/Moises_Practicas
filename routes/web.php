@@ -23,3 +23,4 @@ Route::get('Miprimerlayouts', function(){
 Route::get('vista', function(){ 
     return view('vista'); 
 });
+Route::get('alumno', 'alumnos@index');
