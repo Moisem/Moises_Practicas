@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('welcome', function () {
     return view('welcome');
+});
+Route::get('Helloworld', function(){ 
+    return '<h1>Hello World Moises</h1>'; 
+});
+Route::get('Miprimerlayouts', function(){ 
+    return view('layouts.app'); 
+});
+Route::get('vista', function(){ 
+    return view('vista'); 
 });
