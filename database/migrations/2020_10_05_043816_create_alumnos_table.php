@@ -19,6 +19,8 @@ class CreateAlumnosTable extends Migration
             $table->string("apellido_paterno");
             $table->string("apellido_materno");
             $table->string("Carrera");
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 

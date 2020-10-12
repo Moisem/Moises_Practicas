@@ -18,6 +18,8 @@ class CreateCarreraTable extends Migration
             $table->string("Area");
             $table->string("nombre");
             $table->string("edificio");
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
