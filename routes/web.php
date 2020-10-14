@@ -30,7 +30,7 @@ Route::get('carrera', 'alumnos@index');
 Route::get('alumnos', 'controllerjson@index');
 
 Route::get('alumno/{id}', 'controllerjson@store');
-
+//Route::apiResource('alumnosapi','controllerjson');
 
 //Route::get('/miprimerarray', 'controllerjson@getAlumnos')->name('alumnos');
 /*Route::get('alumnos3', function(){

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\alumnos; 
 use Illuminate\Http\Request;
+use App\Http\Requests\alumnos as requestAlumnos;
 
 class controllerjson extends Controller
 {
@@ -42,10 +43,18 @@ class controllerjson extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store($id)
+    /*protected $alumno; 
+    public function contrutorAlumnos(alumnos $alumno)
     {
-        $l = Alumnos::find($id);
-        return ($l);
+       $this->alumno = $alumno;
+    }*/
+    public function store(requestAlumnos $request)
+    {
+        
+        $alumno = new alumnos;
+        $alumno->create($request->all());
+        return redirect('alumnos');
+        
     }
 
     /**
@@ -56,7 +65,8 @@ class controllerjson extends Controller
      */
     public function show($id)
     {
-        //
+        $l = Alumnos::find($id);
+        return ($l);
     }
 
     /**
