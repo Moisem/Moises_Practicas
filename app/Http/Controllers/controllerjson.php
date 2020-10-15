@@ -89,7 +89,8 @@ class controllerjson extends Controller
      */
     public function update(Request $request, $id)
     {
-       
+        Alumnos::find($id)->update($request->all());
+        return response()->json($request);
     }
 
     /**
