@@ -89,7 +89,7 @@ class controllerjson extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       
     }
 
     /**
@@ -100,6 +100,8 @@ class controllerjson extends Controller
      */
     public function destroy($id)
     {
-        //
+        $alumno = Alumnos::find($id);
+        $alumno->delete();
+        return response()->json('Eliminado correctamente');
     }
 }
