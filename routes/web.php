@@ -29,7 +29,7 @@ Route::get('carrera', 'alumnos@index');
 
 Route::get('alumnos', 'controllerjson@index');
 
-Route::get('alumno/{id}', 'controllerjson@store');
+Route::get('alumno/{id}', 'controllerjson@where');
 //Route::apiResource('alumnosapi','controllerjson');
 
 //Route::get('/miprimerarray', 'controllerjson@getAlumnos')->name('alumnos');
@@ -43,3 +43,6 @@ Route::get('alumno/{id}', 'controllerjson@store');
     $alumno->save();
 });*/
 //Route::get('alumno', 'alumnos@store');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
