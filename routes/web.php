@@ -12,9 +12,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+  //  return view('welcome');
+//});
 Route::get('Helloworld', function(){ 
     return '<h1>Hello World Moises</h1>'; 
 });
@@ -26,6 +26,9 @@ Route::get('vista', function(){
 });
 Route::get('carrera', 'alumnos@index');
 
+Route::get('/', function(){ 
+    return view('pokemon'); 
+});
 
 Route::get('alumnos', 'controllerjson@index');
 
