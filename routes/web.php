@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 Route::get('Helloworld', function(){ 

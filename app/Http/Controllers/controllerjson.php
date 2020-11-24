@@ -27,6 +27,28 @@ class controllerjson extends Controller
         return ($lista);
     }
 
+    public function where()
+    {
+        $alumno = alumnos::whereId('1')
+        ->get();
+        return response()->json($alumno); 
+    }
+
+    public function whereNombre()
+    {
+        $alumno = alumnos::select('nombre')
+        ->whereId('4')
+        ->get();
+        return response()->json($alumno); 
+
+    }
+
+    public function whereid($id)
+    {
+        $alumno = alumnos::whereId($id)
+        ->get();
+        return response()->json($alumno); 
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -53,7 +75,7 @@ class controllerjson extends Controller
         
         $alumno = new alumnos;
         $alumno->create($request->all());
-        return redirect('alumnos');
+        return redirect('alumno');
         
     }
 
@@ -77,7 +99,8 @@ class controllerjson extends Controller
      */
     public function edit($id)
     {
-        //
+        
+
     }
 
     /**
